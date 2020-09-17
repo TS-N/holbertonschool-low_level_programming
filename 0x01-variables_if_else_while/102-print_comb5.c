@@ -25,7 +25,7 @@ int	main(void)
 				c4 = '0';
 				while (c4 <= '9')
 				{
-					if ((c3 > c && c4 >= c2) || (c3 == c && c4 > c2))
+					if ((c3 > c) || (c3 == c && c4 > c2))
 					{
 						putchar(c);
 						putchar(c2);
