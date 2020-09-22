@@ -33,7 +33,7 @@ int	main(void)
 	long long	n2;
 	long long	n;
 
-	i = 1;
+	i = 0;
 	n1 = 0;
 	n2 = 1;
 	while (i <= 50)
