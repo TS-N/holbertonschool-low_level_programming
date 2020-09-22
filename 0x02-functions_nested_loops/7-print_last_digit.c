@@ -12,7 +12,9 @@ int	print_last_digit(int n)
 	int	ld;
 
 	ld = 0;
-	if (n < 0)
+	if (n == -2147483648)
+		ld = 8;
+	else if (n < 0)
 		ld = (-n % 10);
 	else
 		ld = (n % 10);
