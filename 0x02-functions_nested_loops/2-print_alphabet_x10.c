@@ -13,7 +13,6 @@ void	print_alphabet(void)
 		++c;
 	}
 	_putchar('\n');
-	return (void);
 }
 
 /**
@@ -25,5 +24,4 @@ void	print_alphabet_x10(void)
 
 	while (++i <= 10)
 		print_alphabet();
-	return (void);
 }

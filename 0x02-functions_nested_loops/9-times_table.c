@@ -23,7 +23,6 @@ void	times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
 				_putchar('0' + (nb / 10));
 				_putchar('0' + (nb % 10));
 			}
@@ -32,7 +31,6 @@ void	times_table(void)
 			else
 			{
 				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + (nb));
