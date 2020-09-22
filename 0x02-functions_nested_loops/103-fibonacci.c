@@ -5,7 +5,7 @@
  *@n: the number to print
  *
  **/
-void	_putnb(long long n)
+void	_putnb(int n)
 {
 	if (n < 0)
 	{
@@ -29,10 +29,10 @@ void	_putnb(long long n)
 int	main(void)
 {
 	int		i;
-	long long	n1;
-	long long	n2;
-	long long	n;
-	long long	sum;
+	int		n1;
+	int		n2;
+	int		n;
+	int		sum;
 
 	i = 1;
 	sum = 0;
