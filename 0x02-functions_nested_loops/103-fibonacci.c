@@ -1,27 +1,6 @@
 #include <stdio.h>
 
 /**
- * _putnb - print a number to stdout
- *@n: the number to print
- *
- **/
-void	_putnb(int n)
-{
-	if (n < 0)
-	{
-		putchar('-');
-		n = -n;
-	}
-	if ((n / 10))
-	{
-		_putnb(n / 10);
-		putchar('0' + (n % 10));
-	}
-	else
-		putchar('0' + n);
-}
-
-/**
 * main - entry point
 *
 * Return: nothing
@@ -47,7 +26,6 @@ int	main(void)
 		if (!(n % 2))
 			sum += n;
 	}
-	_putnb(sum);
-	putchar('\n');
+	printf("%d\n",sum);
 	return (0);
 }
