@@ -44,7 +44,7 @@ int	main(void)
 		n = n1 + n2;
 		n1 = n2;
 		n2 = n;
-		if (n % 2)
+		if (!(n % 2))
 			sum += n;
 	}
 	_putnb(sum);
