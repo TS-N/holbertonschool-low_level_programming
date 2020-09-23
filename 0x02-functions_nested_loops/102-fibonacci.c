@@ -21,7 +21,7 @@ int	main(void)
 		n1 = n2;
 		n2 = n;
 		printf("%lu", n);
-		if (!(i == 50))
+		if (!(i == 49))
 			printf(", ");
 		++i;
 	}
