@@ -22,7 +22,7 @@ int	main(void)
 		n2 = n;
 		printf("%lu", n);
 		if (!(i == 50))
-			printf(", ");;
+			printf(", ");
 		++i;
 	}
 	printf("\n");
