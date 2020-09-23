@@ -7,13 +7,11 @@
 **/
 int	main(void)
 {
-	int		i;
 	int		n1;
 	int		n2;
 	int		n;
 	int		sum;
 
-	i = 1;
 	sum = 0;
 	n = 0;
 	n1 = 0;
@@ -26,6 +24,6 @@ int	main(void)
 		if (!(n % 2))
 			sum += n;
 	}
-	printf("%d\n",sum);
+	printf("%d\n", sum);
 	return (0);
 }
