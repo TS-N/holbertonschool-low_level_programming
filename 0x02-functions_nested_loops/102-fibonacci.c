@@ -22,10 +22,7 @@ int	main(void)
 		n2 = n;
 		printf("%lu", n);
 		if (!(i == 50))
-		{
-			putchar(',');
-			putchar(' ');
-		}
+			printf(", ");;
 		++i;
 	}
 	printf("\n");
