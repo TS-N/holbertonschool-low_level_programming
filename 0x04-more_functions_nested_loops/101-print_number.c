@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- * _putnb - print a number to stdout
+ * print_number - print a number to stdout
  *@n: the number to print
  *
  **/
 void	print_number(int n)
 {
 	unsigned int	nb;
+
 	if (n < 0)
 	{
 		_putchar('-');
