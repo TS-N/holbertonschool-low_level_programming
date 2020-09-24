@@ -9,11 +9,9 @@ int	main(void)
 {
 	long	fac;
 	long	res;
-	long	n;
 
-	n = 612852475143;
 	fac = 2;
-	res = n;
+	res = 612852475143;
 	while (fac < res)
 	{
 		while (!(res % fac))
