@@ -24,7 +24,6 @@ void	more_numbers(void)
 	int	nb;
 	int	i;
 
-	c = '0';
 	i = 0;
 	while (i < 10)
 	{
