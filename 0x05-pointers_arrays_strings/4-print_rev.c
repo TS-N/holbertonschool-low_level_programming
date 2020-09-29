@@ -10,7 +10,10 @@ void	print_rev(char *s)
 	char	*i0 = s;
 
 	if (!s)
+	{
+		_putchar('\n');
 		return;
+	}
 	while (*++s)
 		;
 	while (--s >= i0)
