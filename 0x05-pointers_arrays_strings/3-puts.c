@@ -2,13 +2,17 @@
 
 /**
 * _puts - print a string
-* @s: the string to print
+* @str: the string to print
 *
 **/
 void	_puts(char *str)
 {
+	if (!str)
+	{
+		_putchar('\n');
+		return;
+	}
 	while (*str)
 		_putchar(*str++);
 	_putchar('\n');
 }
-
