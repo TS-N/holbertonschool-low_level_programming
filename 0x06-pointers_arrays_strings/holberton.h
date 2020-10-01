@@ -4,5 +4,6 @@
 #include <stdio.h>
 
 void	_putchar(int c);
+void	print_number(int n);
 
 #endif
