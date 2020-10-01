@@ -76,8 +76,6 @@ char	*infinite_add(char *n1, char *n2, char *r, int size_r)
 	int	l1;
 	int	l2;
 	int	p;
-	int	rem;
-	int	res;
 
 	l1 = _strlen(n1);
 	l2 = _strlen(n2);
