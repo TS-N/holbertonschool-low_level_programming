@@ -9,10 +9,12 @@
 void	print_diagsums(int *a, int size)
 {
 	int	i, j;
-	unsigned int	sum1, sum2 = 0;
+	unsigned int	sum1, sum2;
 
 	i = size - 1;
 	j = 0;
+	sum1 = 0;
+	sum2 = 0;
 	if (!a)
 		return;
 	while (j < size)
