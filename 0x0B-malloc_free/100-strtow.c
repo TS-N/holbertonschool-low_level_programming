@@ -91,7 +91,7 @@ char	**strtow(char *str)
 		}
 		++i;
 		while (*str && *str != ' ')
-			++str;;
+			++str;
 	}
 	return (r);
 }
