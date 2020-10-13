@@ -68,6 +68,8 @@ char	**strtow(char *str)
 	int	wrdnb;
 	int	i;
 
+	if (!str || !*str)
+		return (0);
 	wrdnb = wrdcnt(str, ' ');
 	r = malloc((wrdnb + 1) * sizeof(char *));
 	if (!r)
