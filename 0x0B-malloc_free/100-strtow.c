@@ -71,6 +71,8 @@ char	**strtow(char *str)
 	if (!str || !*str)
 		return (0);
 	wrdnb = wrdcnt(str, ' ');
+	if (!wrdnb)
+		return (0);
 	r = malloc((wrdnb + 1) * sizeof(char *));
 	if (!r)
 		return (0);
@@ -89,7 +91,7 @@ char	**strtow(char *str)
 		}
 		++i;
 		while (*str && *str != ' ')
-			++str;
+			++str;;
 	}
 	return (r);
 }
