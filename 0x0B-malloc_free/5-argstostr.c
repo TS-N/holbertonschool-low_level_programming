@@ -56,11 +56,15 @@ char	*argstostr(int ac, char **av)
 	int	totlen;
 	int	i;
 
+	if (!ac || !av)
+		return (0);
 	i = 0;
 	totlen = 0;
 	while (++i <= ac)
 		totlen += _strlen(av[i]) + 1;
 	str = malloc(totlen + 1);
+	if (!str)
+		return (0);
 	str[totlen] = 0;
 	i = 0;
 	while (++i < ac)
