@@ -71,5 +71,6 @@ char	*argstostr(int ac, char **av)
 		_strcat(str, av[i]);
 		_strcat(str, "\n");
 	}
+	str[totlen] = 0;
 	return (str);
 }
