@@ -58,14 +58,14 @@ char	*argstostr(int ac, char **av)
 
 	if (!ac || !av)
 		return (0);
-	i = 0;
+	i = -1;
 	totlen = 0;
 	while (++i < ac)
 		totlen += _strlen(av[i]) + 1;
 	str = malloc(totlen + 1);
 	if (!str)
 		return (0);
-	i = 0;
+	i = -1;
 	while (++i < ac)
 	{
 		_strcat(str, av[i]);
