@@ -49,7 +49,7 @@ char	*_strdup(char *str)
 
 	if (!str)
 		return (0);
-	dup = malloc(strlen(str) + 1);
+	dup = malloc(_strlen(str) + 1);
 	if (!dup)
 		return (0);
 	dup = _strcpy(dup, str);
