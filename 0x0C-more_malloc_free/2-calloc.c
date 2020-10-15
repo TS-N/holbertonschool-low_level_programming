@@ -18,6 +18,7 @@ void	*_calloc(unsigned int nmemb, unsigned int size)
 	r = malloc(res);
 	if (!r)
 		return (0);
+	i = 0;
 	while (i < res)
 	{
 		((char *)r)[i] = 0;
