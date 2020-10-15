@@ -21,7 +21,7 @@ char	*_memcpy(char *dest, char *src, unsigned int n)
 }
 
 /**
- * _realloc: a function that reallocates a memory block
+ * _realloc - a function that reallocates a memory block
  * @ptr: a pointer to the memory previously allocated
  * @os: the old size in bytes of the allocated ptr
  * @ns: the new size in bytes of the new memory block
