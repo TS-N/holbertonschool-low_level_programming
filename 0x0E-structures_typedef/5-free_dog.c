@@ -1,4 +1,4 @@
-#include "dogs.h"
+#include "dog.h"
 
 /**
   * free_dog - free the struct dog created with dog_init
@@ -6,6 +6,8 @@
   **/
 void free_dog(dog_t *d)
 {
+	if (!d)
+		return;
 	free(d->name);
 	free(d->owner);
 	free(d);
