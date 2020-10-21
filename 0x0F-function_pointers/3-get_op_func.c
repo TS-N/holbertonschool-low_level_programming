@@ -1,5 +1,12 @@
 #include "3-calc.h"
 
+/**
+  * get_op_func - get the function corresponding to the op string
+  *@s: the operator string
+  *
+  * Return: returns a pointer to the function that \
+  corresponds to the operator given as a parameter
+  **/
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -13,6 +20,8 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (ops[i].op)
 	{
 		if (*(ops[i].op) == *s)

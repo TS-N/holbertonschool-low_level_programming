@@ -1,5 +1,12 @@
 #include "3-calc.h"
 
+/**
+  * main - main
+  *@ac: nb of args
+  *@av: the args
+  *
+  * Return: 0
+  **/
 int	main(int ac, char **av)
 {
 	int	(*op_func)(int, int);
