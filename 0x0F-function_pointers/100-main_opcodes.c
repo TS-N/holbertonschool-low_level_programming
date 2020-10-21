@@ -30,7 +30,12 @@ int	main(int ac, char **av)
 	{
 		if (i)
 			printf(" ");
-		printf("%.2x", *(char *)f & 0xff);
+		if (*(unsigned char *)f == 0xc3)
+		{
+			printf("%.2x", *(unsigned char *)f);
+			break;
+		}
+		printf("%.2x", *(unsigned char *)f);
 		++f;
 		++i;
 	}
