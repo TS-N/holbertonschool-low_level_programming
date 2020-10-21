@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 	{
 		if (i)
 			printf(" ");
-		printf("%x", *(char *)f & 0xff );
+		printf("%x", *(char *)f & 0xff);
 		++f;
 		++i;
 	}
