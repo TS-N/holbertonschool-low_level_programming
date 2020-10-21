@@ -11,7 +11,7 @@ int	main(int ac, char **av)
 {
 	int	nb;
 	int	i;
-	void	*f;
+	unsigned char	*f;
 
 	if (ac != 2)
 	{
@@ -25,17 +25,17 @@ int	main(int ac, char **av)
 		exit(2);
 	}
 	i = 0;
-	f = (*main);
+	f = (unsigned char *)(*main);
 	while (i < nb)
 	{
 		if (i)
 			printf(" ");
-		if (*(unsigned char *)f == 0xc3)
+		if (*f == 0xc3)
 		{
-			printf("%.2x", *(unsigned char *)f);
+			printf("%.2x", *f);
 			break;
 		}
-		printf("%.2x", *(unsigned char *)f);
+		printf("%.2x", *(f));
 		++f;
 		++i;
 	}
