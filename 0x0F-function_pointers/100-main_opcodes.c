@@ -16,13 +16,13 @@ int	main(int ac, char **av)
 	if (ac != 2)
 	{
 		printf("Error\n");
-		exit(1);
+		return (1);
 	}
 	nb = atoi(av[1]);
 	if (nb < 0)
 	{
 		printf("Error\n");
-		exit(2);
+		return (2);
 	}
 	i = 0;
 	f = (unsigned char *)(*main);
