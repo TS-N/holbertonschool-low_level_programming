@@ -33,7 +33,12 @@ void	printf_float(va_list val)
   **/
 void	printf_string(va_list val)
 {
-	printf("%s", va_arg(val, char *));
+	char	*tmp;
+
+	tmp = va_arg(val, char *);
+	if (!tmp)
+		tmp = "(nil)";
+	printf("%s", tmp);
 }
 
 /**
