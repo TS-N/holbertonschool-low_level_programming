@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 	va_start(valist, format);
 	i = 0;
 	bs = "";
-	while (format[i] && format)
+	while (format && format[i])
 	{
 		j = 0;
 		while (t_list[j].c)
