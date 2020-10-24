@@ -13,5 +13,5 @@ mov eax, 1
 int 0x80
 
 section .data
-txt db 'Hello, Holberton',13
+txt db 'Hello, Holberton',10
 len equ  $-txt
