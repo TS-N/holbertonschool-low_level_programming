@@ -1,6 +1,42 @@
 #include "variadic_functions.h"
 
 /**
+  * printf_char - use printf for char
+  * @val: va_list
+  **/
+void	printf_char(va_list val)
+{
+	printf("%c", va_arg(val, int));
+}
+
+/**
+  * printf_int - use printf for int
+  * @val: corresponding va_list
+  **/
+void	printf_int(va_list val)
+{
+	printf("%d", va_arg(val, int));
+}
+
+/**
+  * printf_float - use printf for float
+  * @val: correspondong va_list
+  **/
+void	printf_float(va_list val)
+{
+	printf("%f", va_arg(val, double));
+}
+
+/**
+  * printf_string - use printf for string
+  * @val: corresponding va_list
+  **/
+void	printf_string(va_list val)
+{
+	printf("%s", va_arg(val, char *));
+}
+
+/**
  * print_all - a function that prints anything
  * @format:i a list of types of arguments passed to the function
  **/
@@ -8,12 +44,11 @@ void print_all(const char * const format, ...)
 {
 	va_list		valist;
 	type_l		t_list[] = {
-		{'c', "%c"},
-		{'i', "%d"},
-		{'f', "%f"},
-		{'s', "%s"},
+		{'c', printf_char},
+		{'i', printf_int},
+		{'f', printf_float},
+		{'s', printf_string},
 		{0, 0}};
-	void		*tmp;
 	char		*bs;
 	unsigned int	i;
 	unsigned int	j;
@@ -28,16 +63,14 @@ void print_all(const char * const format, ...)
 		{
 			if (t_list[j].c == format[i])
 			{
-				tmp = va_arg(valist, void *);
-				if (tmp == 0 && t_list[j].c == 's')
-					tmp = "(nil)";
 				printf("%s", bs);
 				bs = ", ";
-				printf(t_list[j].f, tmp);
+				t_list[j].func(valist);
 			}
 			++j;
 		}
 		++i;
 	}
 	printf("\n");
+	va_end(valist);
 }
