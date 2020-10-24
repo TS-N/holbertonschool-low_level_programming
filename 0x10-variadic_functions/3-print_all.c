@@ -14,11 +14,13 @@ void print_all(const char * const format, ...)
 		{'s', "%s"},
 		{0, 0}};
 	void		*tmp;
+	char		*bs;
 	unsigned int	i;
 	unsigned int	j;
 
 	va_start(valist, format);
 	i = 0;
+	bs = "";
 	while (format[i])
 	{
 		j = 0;
@@ -29,6 +31,8 @@ void print_all(const char * const format, ...)
 				tmp = va_arg(valist, void *);
 				if (tmp == 0 && t_list[j].c == 's')
 					tmp = "(nil)";
+				printf("%s", bs);
+				bs = ", ";
 				printf(t_list[j].f, tmp);
 			}
 			++j;
