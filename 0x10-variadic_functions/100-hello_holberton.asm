@@ -1,7 +1,7 @@
 section .text
-global main         ;must be declared for using gcc
+global main
 
-main:                  ;tell linker entry pointmov	
+main:
 edx, len
 mov ecx, txt
 mov ebx, 1
