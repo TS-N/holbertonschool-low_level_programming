@@ -7,12 +7,12 @@
 /**
  * struct type_list - a struct linking a char with a format specifier
  * @c: the char
- * @f: the format specifier as a string
+ * @func: the corresponding printf func with correct va_arg type
  **/
 typedef	struct	type_list
 {
 	char	c;
-	char	*f;
+	void	(*func)(va_list);
 } type_l;
 
 int	_putchar(char c);
