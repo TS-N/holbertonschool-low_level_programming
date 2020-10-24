@@ -2,7 +2,7 @@ section .text
 global main
 
 main:
-edx, len
+mov edx, len
 mov ecx, txt
 mov ebx, 1
 mov eax, 4
