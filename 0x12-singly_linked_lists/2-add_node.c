@@ -20,7 +20,8 @@ unsigned int	_strlen(char *s)
 /**
  * add_node - add a node to a list
  * @head: the head of the list
- * Return: the new node
+ *@str: the string of the new node
+* Return: the new node
  **/
 list_t *add_node(list_t **head, const char *str)
 {
