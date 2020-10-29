@@ -8,14 +8,14 @@
 size_t list_len(const list_t *h)
 {
 	size_t	l;
-	list_h	*node;
+	const list_t	*node;
 
 	l = 0;
 	node = h;
 	while (node)
 	{
 		++l;
-		node = node->next
+		node = node->next;
 	}
 	return (l);
 }

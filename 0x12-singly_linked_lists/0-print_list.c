@@ -8,7 +8,7 @@
 size_t	print_list(const list_t *h)
 {
 	size_t	l;
-	list_t	*node;
+	const list_t	*node;
 
 	l = 0;
 	node = h;
