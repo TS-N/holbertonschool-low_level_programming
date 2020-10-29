@@ -28,15 +28,22 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t	*nn;
 	list_t	*node;
 
+	if (!head)
+		return (0);
 	nn = malloc(sizeof(list_t));
 	if (!nn)
 		return (0);
-	node = *head;
-	while (node->next)
-		node = node->next;
 	nn->str = strdup(str);
 	nn->len = _strlen(str);
-	node->next = nn;
+	node = *head;
+	if (!node)
+		*head = nn;
+	else
+	{
+		while (node->next)
+			node = node->next;
+		node->next = nn;
+	}
 	nn->next = 0;
 	return (nn);
 }
