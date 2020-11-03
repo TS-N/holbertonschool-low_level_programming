@@ -26,10 +26,10 @@ listint_t	*find_listint_loop(listint_t *head)
 	p_fast = head;
 	while (1)
 	{
-		p_slow = p_slow->next;
-		p_fast = p_fast->next;
 		if (p_slow == p_fast)
 			break;
+		p_slow = p_slow->next;
+		p_fast = p_fast->next;
 	}
 	return (p_slow);
 }
