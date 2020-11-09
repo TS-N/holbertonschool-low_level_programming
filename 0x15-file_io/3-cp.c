@@ -8,6 +8,8 @@
   **/
 void	read_loop(int fd_from, int fd_to, char *buf)
 {
+	ssize_t	r = 1;
+
 	while (r)
 	{
 		r = read(fd_from, buf, BUF_SIZE);
@@ -39,7 +41,6 @@ int	main(int ac, char **av)
 	char	buf[BUF_SIZE];
 	int	fd_from;
 	int	fd_to;
-	ssize_t	r = 1;
 
 	if (ac != 3)
 	{
