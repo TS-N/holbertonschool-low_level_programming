@@ -5,8 +5,9 @@
   * @fd_from: the input fd
   * @fd_to: the output fd
   * @buf: the buffer
+  * @av: av
   **/
-void	read_loop(int fd_from, int fd_to, char *buf)
+void	read_loop(int fd_from, int fd_to, char *buf, char **av)
 {
 	ssize_t	r = 1;
 
@@ -60,7 +61,7 @@ int	main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	read_loop(fd_from, fd_to, buf);
+	read_loop(fd_from, fd_to, buf, av);
 	if (close(fd_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
