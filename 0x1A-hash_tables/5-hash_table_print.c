@@ -22,9 +22,9 @@ void hash_table_print(const hash_table_t *ht)
 
 	i = 0;
 	toggle = 0;
-	printf("{");
 	if (ht)
 	{
+		printf("{");
 		while (i < ht->size)
 		{
 			node = ht->array[i];
@@ -38,6 +38,6 @@ void hash_table_print(const hash_table_t *ht)
 			}
 			++i;
 		}
+		printf("}\n");
 	}
-	printf("}\n");
 }
