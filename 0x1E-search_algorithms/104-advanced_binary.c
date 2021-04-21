@@ -1,10 +1,10 @@
 #include "search_algos.h"
 
 /**
-  * print_array - prints an array with style
-  * @array: the array to print
-  * @size: the size of the array
-  **/
+ * print_array - prints an array with style
+ * @array: the array to print
+ * @size: the size of the array
+ **/
 void	print_array(int *array, size_t size)
 {
 	size_t	i = 0;
@@ -21,6 +21,40 @@ void	print_array(int *array, size_t size)
 }
 
 /**
+ * rec_bin - searches for a value in an array of\
+ integers using the Binary search algorithm recursively
+ * @array: the ascending sorted array to search in
+ * @size: the size of the array
+ * @value: the value to find
+ * @lwbnd: the lower bound of the new subarray
+ * @upbnd: the upper bound of the new sub array
+ * Return: the index of the value in the array or -1
+ **/
+int	rec_bin(int *array, size_t size, int value, size_t lwbnd, size_t upbnd)
+{
+	size_t	mid;
+
+	if (lwbnd > upbnd)
+		return (-1);
+	print_array(array + lwbnd, upbnd - lwbnd + 1);
+	if (array[lwbnd] == value)
+		return (lwbnd);
+	mid = (upbnd + lwbnd) / 2;
+	if (mid < size)
+	{
+		if (array[mid] > value)
+			return (rec_bin(array, size, value, lwbnd, mid - 1));
+		else if (array[mid] < value)
+			return (rec_bin(array, size, value, mid + 1, upbnd));
+		upbnd = mid;
+		while (mid + 1  > 0 && array[mid - 1] == value)
+			--mid;
+		return (rec_bin(array, size, value, mid, upbnd));
+	}
+	return (-1);
+}
+
+/**
  * advanced_binary - searches for a value in an array of\
  integers using the Binary search algorithm
  * @array: the ascending sorted array to search in
@@ -30,34 +64,7 @@ void	print_array(int *array, size_t size)
  **/
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t	imin;
-	size_t	imax;
-	size_t	i;
-
 	if (array)
-	{
-		print_array(array, size);
-		if (array[0] == value)
-			return (0);
-		imin = 0;
-		imax = size - 1;
-		while (imin < imax)
-		{
-			i = (imax + imin) / 2;
-			if (array[i] > value)
-				imax = i - 1;
-			else if (array[i] < value)
-				imin = i + 1;
-			else
-				if (array[i - 1] == value)
-				{
-					imax = i;
-					imin = i - 1;
-				}
-				else
-					return (i);
-				print_array(array + imin, imax - imin + 1);
-		}
-	}
+		return (rec_bin(array, size, value, 0, size - 1));
 	return (-1);
 }
