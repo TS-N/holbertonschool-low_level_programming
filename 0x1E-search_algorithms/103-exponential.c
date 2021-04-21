@@ -46,7 +46,7 @@ void	print_array(int *array, size_t size)
 {
 	size_t	i = 0;
 
-	printf("Searching in array:");
+	printf("Searching in array: ");
 	while (i < size)
 	{
 		printf("%i", array[i]);
@@ -73,9 +73,11 @@ int	binary_search(int *array, size_t size, int value)
 
 	if (array)
 	{
+		print_array(array, size);
+		if (array[0] == value)
+			return (0);
 		imin = 0;
 		imax = size - 1;
-		print_array(array, size);
 		while (imin < imax)
 		{
 			i = (imax + imin) / 2;
